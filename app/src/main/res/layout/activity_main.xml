@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@id/songAlbum"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/ngot"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="180dp"/>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:max="100"
+        android:progressBackgroundTint="@color/black"
+        android:background="@null"
+        android:progressTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/songAlbum"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/duration"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/seekBar"/>
+    <TextView
+        android:id="@+id/song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Hope you like this app :3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/duration" />
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LHMATN"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/song"
+        android:layout_marginTop="10dp"/>
+    <ImageButton
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_play_arrow_24"
+        app:layout_constraintTop_toBottomOf="@+id/author"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginTop="20dp"/>
+    <ImageButton
+        android:id="@+id/previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_skip_previous_24"
+        app:layout_constraintTop_toTopOf="@+id/play"
+        app:layout_constraintRight_toLeftOf="@+id/play"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <ImageButton
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_skip_next_24"
+        app:layout_constraintTop_toTopOf="@+id/play"
+        app:layout_constraintLeft_toRightOf="@+id/play"
+        style="?android:attr/borderlessButtonStyle"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
